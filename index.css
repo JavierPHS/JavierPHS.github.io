@@ -428,6 +428,25 @@ body:not(.user-is-tabbing) a:focus {
 
 .header__image {
     margin-bottom: var(--gutter-normal);
+    position: right;
+
+}
+  
+.fade-in {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fade-in-animation 3s ease-in-out forwards;
+}
+  
+@keyframes fade-in-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 @media(max-width: 500px) {
