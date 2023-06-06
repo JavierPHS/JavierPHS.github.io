@@ -499,15 +499,15 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 #slideshow {
-    position: relative;
+    /* position: relative; */
     height: 329px;
 }
 
 #slideshow > * {
     animation: 12s autoplay6 infinite linear;
     position: absolute; 
-    /* top: 0; 
-    left: 0;  */
+    top: 0; 
+    left: 0; 
     opacity: 0.0
 }
 
