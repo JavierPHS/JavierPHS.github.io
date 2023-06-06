@@ -51,5 +51,5 @@ async function getData(url) {
 const data = await getData("https://api.github.com/users/JavierPHS");
 
 document.getElementById("avatarImage").src = data['avatar_url']
-document.getElementById("githubBio").textContent = data['bio']
+document.getElementById("githubBio").innerHTML = data['bio']
 

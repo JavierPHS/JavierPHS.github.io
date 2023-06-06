@@ -47,8 +47,20 @@
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
       <div class="header__image">
-        <img id="avatarImage" />
+        <img id="avatarImage" src = />
       </div>
+      <script>
+        async function getData(url) {
+          const response = await fetch(url);
+
+          return response.json();
+        }
+
+        const data = await getData("https://api.github.com/users/JavierPHS");
+
+        document.getElementById("avatarImage").src = data['avatar_url']
+        document.getElementById("githubBio").innerHTML = data['bio']
+      </script>
     </div>
   </header>
 
