@@ -41,3 +41,15 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+async function getData(url) {
+  const response = await fetch(url);
+
+  return response.json();
+}
+
+const data = await getData("https://api.github.com/users/JavierPHS");
+
+document.getElementById("avatarImage").src = data['avatar_url']
+document.getElementById("githubBio").textContent = data['bio']
+
