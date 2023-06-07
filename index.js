@@ -1,7 +1,3 @@
-/* -----------------------------------------
-  Have focus outline only for keyboard users 
- ---------------------------------------- */
-
 const handleFirstTab = (e) => {
   if(e.key === 'Tab') {
     document.body.classList.add('user-is-tabbing')
@@ -42,16 +38,14 @@ window.addEventListener("scroll", () => {
   }
 });
 
-async function getData(url) {
-  const response = await fetch(url);
+(async () => {
+  const res = await fetch('https://api.github.com/users/JavierPHS');
+  if(res.ok) {
+    const data = await res.json();
 
-  return response.json();
-}
-
-const data = await getData("https://api.github.com/users/JavierPHS");
-
-document.getElementById("avatarImage").src = data['avatar_url']
-document.getElementById("githubBio").innerHTML = data['bio']
-console.log(data)
-
-
+    const portfolioImage = document.getElementById('avatarImage');
+    const portfolioBio = document.getElementById('githubBio');
+    portfolioImage.src = data.avatar_url;
+    portfolioBio.innerText = data.bio;
+  }
+})()
