@@ -260,6 +260,36 @@ body:not(.user-is-tabbing) a:focus {
     background: transparent;
 }
 
+.btn--blue {
+    border: 1px solid #0077b7;
+    background: #0077b7;
+    transition: all 0.2s;
+}
+
+.btn--blue::after {
+    display: none;
+}
+
+.btn--blue:hover,
+.btn--blue:focus {
+    background: transparent;
+}
+
+.btn--grey {
+    border: 1px solid #5c5454;
+    background: #5c5454;
+    transition: all 0.2s;
+}
+
+.btn--grey::after {
+    display: none;
+}
+
+.btn--grey:hover,
+.btn--grey:focus {
+    background: transparent;
+}
+
 .link__text {
     position: relative;
     display: inline-block;
@@ -439,6 +469,13 @@ body:not(.user-is-tabbing) a:focus {
     border-radius: 50%;
 }
 
+.social_button {
+    height: 3rem;
+    position: relative;
+    top: 5px;
+    left: 5px   
+}
+
 @media(max-width: 500px) {
     .header {
         text-align: center;
@@ -576,7 +613,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__content {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -598,7 +635,6 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(min-width: 901px) {
     .about__text {
-        border: 2px solid #f0e9f2;
         padding: 10px;
         flex: 0 0 35%;
     }
