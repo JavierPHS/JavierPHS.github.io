@@ -456,24 +456,25 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-medium);
 }
 
-.header__image {
-    flex: 1;
-}
-
-#avatarImage {
-    position: absolute;
-    right: -60%;
-    top: -10%;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-}
-
 .social_button {
     height: 3rem;
     position: relative;
     top: 5px;
     left: 5px   
+}
+
+.avatar-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    position: relative;
+    left: 100px;
+    top: 150px;
+}
+
+#avatarImage {
+    border-radius: 50%;
 }
 
 @media(max-width: 500px) {
