@@ -443,10 +443,16 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-normal);
 }
 
+.header__text-box {
+    display: flex;
+    align-items: center;     /* vertical alignment */
+    justify-content: space-between;
+    padding-top: 15vh;       /* creates natural vertical spacing */
+}
 .header__text {
-    position: absolute;
+    position: static;
     top: 50%;
-    transform: translateY(-50%);
+    transform: none;
 }
 
 .header__text p {
@@ -468,9 +474,6 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
-    position: relative;
-    left: 100px;
-    top: 150px;
 }
 
 #avatarImage {
